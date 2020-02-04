@@ -1,0 +1,13 @@
+<h1>Buscando... <small></small></h1> 
+<hr>
+<div class="row" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-warning">
+        No existen resultados con el termino: robin
+    </div>
+  </div>
+</div>
+
+<div class="card-columns">
+  <app-heroe-tarjeta [heroe]="heroex" [index] = "heroex.idx" *ngFor="let heroex of heroes"></app-heroe-tarjeta>
+</div>
